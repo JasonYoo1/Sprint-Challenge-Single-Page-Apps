@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import EpisodeCard from './EpisodesCard'
+import { Card, Icon, Image } from 'semantic-ui-react'
 
 export default function EpisodeList() {
   // TODO: Add useState to track data from useEffect
@@ -26,7 +27,9 @@ export default function EpisodeList() {
 
       {episode.map(episode => (
         <div>
+            <Card>
             <EpisodeCard name = {episode.name} airdate = {episode.air_date} episode= {episode.episode} characters count = {episode.characters.length}/>
+            </Card>
         </div>
       ))}
 

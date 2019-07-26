@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import LocationCard from "./LocationCard"
+import { Card, Icon, Image } from 'semantic-ui-react'
 
 export default function LocationsList() {
     // TODO: Add useState to track data from useEffect
@@ -26,7 +27,9 @@ export default function LocationsList() {
   
         {location.map(location => (
           <div>
+            <Card>
               <LocationCard name ={location.name} type={location.type} dimension ={location.dimension} residents={location.residents.length}/>
+              </Card>
           </div>
         ))}
   

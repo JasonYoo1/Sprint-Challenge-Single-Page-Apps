@@ -39,7 +39,7 @@ header h1 {
 
 }
 
-.char-card{
+.char-card .episode-card .loc-card{
   border: 1px solid black;
   margin-bottom: 20px;
   width: 80%;
