@@ -5,6 +5,7 @@ import 'semantic-ui-css/semantic.min.css'
 import './index.css';
 import App from './App';
 
+//Gave App function to Route
 ReactDOM.render(<Router>
   <App />
 </Router>, document.getElementById('root'));

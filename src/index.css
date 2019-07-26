@@ -38,3 +38,16 @@ header h1 {
   text-align: center;
 
 }
+
+.char-card{
+  margin: auto;
+  width: 80%;
+  padding-top: 20%; 
+
+}
+
+.loc-card{
+  margin: auto;
+  width: 80%;
+}
+
