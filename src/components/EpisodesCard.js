@@ -1,5 +1,5 @@
 import React from 'react'
-import axios from "axios"
+import { Card, Icon, Image } from 'semantic-ui-react'
 
 
 export default function EpisodeCard (props) {
