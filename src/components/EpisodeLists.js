@@ -1,32 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
-import CharacterCard from './CharacterCard'
+import EpisodeCard from './EpisodesCard'
 
 export default function EpisodeList() {
   // TODO: Add useState to track data from useEffect
-  const [character, setCharacter] = useState([]);
+  const [episode, setEpisode] = useState([]);
 
   useEffect(() => {
-    const getCharacters = () => {
+    const getEpisodes = () => {
       axios
-        .get('https://rickandmortyapi.com/api/character/')
+        .get('https://rickandmortyapi.com/api/episode/')
         .then(response => {
-          setCharacter(response.data.results);
-          // console.log('This is in CharacterList', response.data.results)
+            setEpisode(response.data.results);
+          console.log('This is in EpisodeLists', response.data.results)
         })
         .catch(error => {
           console.error('Server Error', error);
         });
     }
     
-    getCharacters();
+    getEpisodes();
   }, []);
 
   return <section className='character-list grid-view'>      
 
-      {character.map(character => (
+      {episode.map(episode => (
         <div>
-          <CharacterCard species = {character.species} name ={character.name} origin = {character.origin.name} location = {character.location.name} status ={character.status}/>
+            <EpisodeCard name = {episode.name} airdate = {episode.air_date} episode= {episode.episode} characters count = {episode.characters.length}/>
         </div>
       ))}
 

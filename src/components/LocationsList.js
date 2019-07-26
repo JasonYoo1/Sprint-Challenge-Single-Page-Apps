@@ -12,7 +12,7 @@ export default function LocationsList() {
           .get('https://rickandmortyapi.com/api/location/')
           .then(response => {
             setLocation(response.data.results);
-            console.log('This is in CharacterList', response.data.results)
+            // console.log('This is in CharacterList', response.data.results)
           })
           .catch(error => {
             console.error('Server Error', error);
