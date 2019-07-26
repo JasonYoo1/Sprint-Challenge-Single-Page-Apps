@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import LocationCard from "./LocationCard"
-import { Card, Icon, Image } from 'semantic-ui-react'
+import { Card} from 'semantic-ui-react'
 
 export default function LocationsList() {
     // TODO: Add useState to track data from useEffect

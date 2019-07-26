@@ -39,14 +39,15 @@ header h1 {
 
 }
 
-.char-card .episode-card{
-  border: 1px solid black;
-  margin-bottom: 20px;
+.char-card{
+  margin: auto;
   width: 80%;
+  padding-top: 20%; 
+
 }
 
 .loc-card{
-  border: 1px solid black;
-  margin-bottom: 20px;
+  margin: auto;
   width: 80%;
 }
+
