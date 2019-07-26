@@ -26,7 +26,7 @@ export default function LocationsList() {
   
         {location.map(location => (
           <div>
-              <LocationCard name ={location.name}/>
+              <LocationCard name ={location.name} type={location.type} dimension ={location.dimension} residents={location.residents.length}/>
           </div>
         ))}
   

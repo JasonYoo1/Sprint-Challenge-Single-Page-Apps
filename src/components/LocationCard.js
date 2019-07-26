@@ -6,7 +6,7 @@ export default function LocationCard (props) {
   // image={image}
   return (<div className='loc-card'>
   <h2>{props.name}</h2>
-  {/* <p> Status: {props.species} {props.status}, Location: {props.location} , Origin: {props.origin} </p> */}
+  <p> {props.type} Dimension: {props.dimension} Population: {props.residents}</p>
 </div>)
 
 }
