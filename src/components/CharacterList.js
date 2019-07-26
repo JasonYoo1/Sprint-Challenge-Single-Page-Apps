@@ -12,7 +12,7 @@ export default function CharacterList() {
         .get('https://rickandmortyapi.com/api/character/')
         .then(response => {
           setCharacter(response.data.results);
-          console.log('This is in CharacterList', response.data.results)
+          // console.log('This is in CharacterList', response.data.results)
         })
         .catch(error => {
           console.error('Server Error', error);
@@ -26,7 +26,7 @@ export default function CharacterList() {
 
       {character.map(character => (
         <div>
-          <CharacterCard name ={character.name}  status ={character.status}/>
+          <CharacterCard species = {character.species} name ={character.name} origin = {character.origin.name} location = {character.location.name} status ={character.status}/>
         </div>
       ))}
 

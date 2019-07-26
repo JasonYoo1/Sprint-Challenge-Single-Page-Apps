@@ -38,3 +38,9 @@ header h1 {
   text-align: center;
 
 }
+
+.char-card{
+  border: 1px solid black;
+  margin-bottom: 20px;
+  width: 80%;
+}
