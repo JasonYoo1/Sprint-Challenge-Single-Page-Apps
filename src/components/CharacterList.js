@@ -24,7 +24,7 @@ export default function CharacterList() {
   }, []);
 
   return <section className='character-list grid-view'>      
-
+  {/* Used map to handpick information and render onto page// */}
       {character.map(character => (
         <div>
            <Card>

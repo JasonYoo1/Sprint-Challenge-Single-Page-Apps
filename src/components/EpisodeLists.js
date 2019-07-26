@@ -3,6 +3,8 @@ import axios from "axios";
 import EpisodeCard from './EpisodesCard'
 import { Card, Icon, Image } from 'semantic-ui-react'
 
+
+
 export default function EpisodeList() {
   // TODO: Add useState to track data from useEffect
   const [episode, setEpisode] = useState([]);
@@ -13,6 +15,7 @@ export default function EpisodeList() {
         .get('https://rickandmortyapi.com/api/episode/')
         .then(response => {
             setEpisode(response.data.results);
+            //Logged for sanity check
           console.log('This is in EpisodeLists', response.data.results)
         })
         .catch(error => {
@@ -27,6 +30,7 @@ export default function EpisodeList() {
 
       {episode.map(episode => (
         <div>
+            {/* Used map to handpick information and render onto page// */}
             <Card>
             <EpisodeCard name = {episode.name} airdate = {episode.air_date} episode= {episode.episode} characters count = {episode.characters.length}/>
             </Card>

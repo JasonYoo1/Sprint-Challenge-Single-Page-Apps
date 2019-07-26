@@ -19,6 +19,7 @@ const characterLabel = createLabel("users", "Characters")
 const locationLabel = createLabel("", "Location")
 const episodeLabel = createLabel("", "Episodes" )
 
+//Added new Tab that navigates to appropriate location (Location Tab and Episode Tab)
 const panes = [
   { menuItem: <Menu.Item key='home' as={Nav} to={`/`} content={welcomeLabel} /> },
   { menuItem: <Menu.Item key='characters' as={Nav} to={`/characters`} content={characterLabel} /> },

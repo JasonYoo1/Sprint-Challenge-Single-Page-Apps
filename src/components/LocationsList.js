@@ -13,6 +13,7 @@ export default function LocationsList() {
           .get('https://rickandmortyapi.com/api/location/')
           .then(response => {
             setLocation(response.data.results);
+            //Logged for sanity check
             // console.log('This is in CharacterList', response.data.results)
           })
           .catch(error => {
@@ -24,7 +25,7 @@ export default function LocationsList() {
     }, []);
   
     return <section>      
-  
+      {/* Used map to handpick information and render onto page// */}
         {location.map(location => (
           <div>
             <Card>

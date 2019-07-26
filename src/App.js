@@ -4,7 +4,7 @@ import Header from './components/Header.js';
 import AppRouter from './components/AppRouter.js';
 import { NavLink } from 'react-router-dom'
 
-
+//created NavLink to Home
 export default function App() {
   return <main>
     <Header />
