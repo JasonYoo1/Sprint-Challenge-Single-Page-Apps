@@ -1,22 +1,49 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
+import CharacterCard from './CharacterCard'
 
 export default function CharacterList() {
-  const [characterArray, setCharacterArray] = useState([]);
+  // TODO: Add useState to track data from useEffect
+  const [character, setCharacter] = useState([]);
 
   useEffect(() => {
-    // TODO: Add AJAX/API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-    axios.get('https://rickandmortyapi.com/api/character/')
-    .then (res => {
-      console.log(res.data.results);
-      setCharacterArray (res.data.results)
-    })
-  }, [])
+    const getCharacters = () => {
+      axios
+        .get('https://rickandmortyapi.com/api/character/')
+        .then(response => {
+          setCharacter(response.data.results);
+          console.log('This is in CharacterList', response.data.results)
+        })
+        .catch(error => {
+          console.error('Server Error', error);
+        });
+    }
+    
+    getCharacters();
+  }, []);
 
-  return <section className='character-list grid-view'>
+  return <section className='character-list grid-view'>      
+      {/* <div className="movie-director">
+        Director: 
+      </div>
+      <div className="movie-metascore">
+        Metascore: 
+      </div>
+      <h3>Actors</h3> */}
 
-      <h2>TODO: `array.map()` over your state here!</h2>
+      {character.map(character => (
+        <div>
+          <h1>{character.name}, {character.status}</h1>
+          {/* <CharacterCard name ={character.name}/> */}
+        </div>
+      ))}
+
     </section>
 
 }
+
+
+
+// {character.map(card => {
+//   return <div className = "CharacterCard">
+//     <h1>Character Info:</h1> <CharacterCard name = {card.name}/>
