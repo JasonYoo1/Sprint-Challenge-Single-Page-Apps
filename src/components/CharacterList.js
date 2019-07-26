@@ -23,18 +23,10 @@ export default function CharacterList() {
   }, []);
 
   return <section className='character-list grid-view'>      
-      {/* <div className="movie-director">
-        Director: 
-      </div>
-      <div className="movie-metascore">
-        Metascore: 
-      </div>
-      <h3>Actors</h3> */}
 
       {character.map(character => (
         <div>
-          <h1>{character.name}, {character.status}</h1>
-          {/* <CharacterCard name ={character.name}/> */}
+          <CharacterCard name ={character.name}  status ={character.status}/>
         </div>
       ))}
 

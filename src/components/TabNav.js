@@ -16,10 +16,13 @@ const createLabel = (iconName, labelText) => <span><Icon name={iconName} />{labe
 
 const welcomeLabel = createLabel("home", "Home Page")
 const characterLabel = createLabel("users", "Characters")
+const locationLabel = createLabel("", "Location")
 
 const panes = [
   { menuItem: <Menu.Item key='home' as={Nav} to={`/`} content={welcomeLabel} /> },
-  { menuItem: <Menu.Item key='characters' as={Nav} to={`/characters`} content={characterLabel} /> }
+  { menuItem: <Menu.Item key='characters' as={Nav} to={`/characters`} content={characterLabel} /> },
+  { menuItem: <Menu.Item key='location' as={Nav} to={`/location`} content={locationLabel} /> }
+
 ]
 
 const TabNav = () => <Tab panes={panes} renderActiveOnly={false} />
