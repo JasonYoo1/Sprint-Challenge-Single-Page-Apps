@@ -32,7 +32,7 @@ export default function EpisodeList() {
         <div>
             {/* Used map to handpick information and render onto page// */}
             <Card>
-            <EpisodeCard name = {episode.name} airdate = {episode.air_date} episode= {episode.episode} characters count = {episode.characters.length}/>
+            <EpisodeCard name = {episode.name} airdate = {episode.air_date} episode= {episode.episode} characterscount = {episode.characters.length}/>
             </Card>
         </div>
       ))}

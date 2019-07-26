@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import CharacterCard from './CharacterCard'
-import { Card } from 'semantic-ui-react'
+import { Card, Image } from 'semantic-ui-react'
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -28,6 +28,7 @@ export default function CharacterList() {
       {character.map(character => (
         <div>
            <Card>
+           <Image src={character.image} wrapped ui={false} />
           <CharacterCard species = {character.species} name ={character.name} origin = {character.origin.name} location = {character.location.name} status ={character.status}/>
           </Card>
         </div>
